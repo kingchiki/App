@@ -1,0 +1,21 @@
+<app-header/>
+
+<div class="results-container">
+  <div class="result-topic">
+    <p *ngIf="!isProfile"><span>Search Recipes Over The Internet For:</span><span> <a (click)="fetchData(query, true)">{{query}}</a></span></p>
+    <button *ngIf="userData" (click)="showPopup()">Add New Recipe</button>
+  </div>
+  <div class="content" *ngIf="recipeList.length > 0">
+
+    <div class="card-wrapper">
+      <ng-container *ngFor="let recipe of recipeList">
+        <app-recipe-card [recipe]="recipe"/>
+      </ng-container>
+    </div>
+
+  </div>
+</div>
+<app-recipe-add-popup #popup (fetchData)="fetchData()"></app-recipe-add-popup>
+
+<app-footer/>
+

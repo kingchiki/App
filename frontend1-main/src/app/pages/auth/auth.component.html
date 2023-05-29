@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<div class="auth-container">
+  <div class="content">
+    <ng-container *ngIf="!showRegisterForm; then login else register"></ng-container>
+    <ng-template #login>
+      <div class="login-content">
+        <h2>Login Form</h2>
+        <form (ngSubmit)="onSubmit()">
+          <input type="text" name="name" placeholder="Enter username" [(ngModel)]="name"/>
+          <input type="password" name="password" placeholder="Enter password" [(ngModel)]="password"/>
+          <p (click)="showRegisterForm = true">Not Registered Yet? Click to Register.</p>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </ng-template>
+
+    <ng-template #register>
+      <div class="register-content">
+        <h2>Register Form</h2>
+        <form [formGroup]="regForm" (ngSubmit)="regUser($event)">
+          <input type="text" placeholder="Enter name" formControlName="name"/>
+          <div *ngIf="( regForm.controls['name'].dirty || regForm.controls['name'].touched)">
+            <div class="error-message" *ngIf="regForm.controls['name']?.errors && regForm.controls['name'].errors?.['required'] "> Name is required.</div>
+          </div>
+          <input type="email" placeholder="Enter email" formControlName="email"/>
+          <div *ngIf="( regForm.controls['email'].dirty || regForm.controls['email'].touched)">
+            <div class="error-message" *ngIf="regForm.controls['email']?.errors && regForm.controls['email'].errors?.['required'] "> Email is required.</div>
+            <div class="error-message" *ngIf="regForm.controls['email']?.errors && regForm.controls['email'].errors?.['email'] "> Invalid email</div>
+          </div>
+          <input type="password" placeholder="Enter password" formControlName="password"/>
+          <div *ngIf="( regForm.controls['password'].dirty || regForm.controls['password'].touched)">
+            <div class="error-message" *ngIf="regForm.controls['password']?.errors && regForm.controls['password'].errors?.['required'] "> Password is required.</div>
+          </div>
+          <input type="password" placeholder="Re-enter password" formControlName="re-password"/>
+          <div *ngIf="( regForm.controls['re-password'].dirty || regForm.controls['re-password'].touched)">
+            <div class="error-message" *ngIf="regForm.controls['re-password']?.errors && regForm.controls['re-password'].errors?.['required'] "> Confirm password is required.</div>
+            <div class="error-message" *ngIf="regForm.controls['re-password']?.errors && regForm.controls['re-password'].errors?.['mustMatch'] "> Not match</div>
+          </div>
+          <p (click)="showRegisterForm = false">Registered Already? Click to Login.</p>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+<app-footer></app-footer>
+

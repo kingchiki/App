@@ -1,0 +1,72 @@
+.results-container {
+  width: 100%;
+  background-color: #f0f9f9;
+  height: calc(100vh - 150px - 80px);
+  overflow-y: scroll;
+
+  .result-topic {
+    padding: 40px 0;
+    width: 90%;
+    text-align: start;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-weight: 600;
+      font-size: 20px;
+
+      span:first-child {
+
+      }
+
+      span:last-child {
+        color: #dba226;
+        font-style: italic;
+      }
+    }
+
+    a {
+      cursor: pointer;
+      text-decoration: underline;
+      margin-left: 1rem;
+      transition: .4s ease;
+      &:hover {
+        color: purple;
+
+      }
+    }
+
+    button {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      background-color: #dba226;
+      color: #ffffff;
+      border: none;
+      padding: 10px;
+      width: 200px;
+      border-radius: 15px;
+      height: 50px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #000000;
+        color: #dba226;
+      }
+    }
+  }
+
+  .content {
+    width: 90%;
+    margin: auto;
+    padding: 0 0 40px;
+
+    .card-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+  }
+}

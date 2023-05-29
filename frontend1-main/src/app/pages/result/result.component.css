@@ -1,0 +1,61 @@
+.results-container {
+  width: 100%;
+  background-color: #f0f9f9;
+  height: calc(100vh - 150px - 80px);
+  overflow-y: scroll;
+}
+.results-container .result-topic {
+  padding: 40px 0;
+  width: 90%;
+  text-align: start;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.results-container .result-topic p {
+  font-weight: 600;
+  font-size: 20px;
+}
+.results-container .result-topic p span:last-child {
+  color: #dba226;
+  font-style: italic;
+}
+.results-container .result-topic a {
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 1rem;
+  transition: 0.4s ease;
+}
+.results-container .result-topic a:hover {
+  color: purple;
+}
+.results-container .result-topic button {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background-color: #dba226;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  width: 200px;
+  border-radius: 15px;
+  height: 50px;
+  cursor: pointer;
+}
+.results-container .result-topic button:hover {
+  background-color: #000000;
+  color: #dba226;
+}
+.results-container .content {
+  width: 90%;
+  margin: auto;
+  padding: 0 0 40px;
+}
+.results-container .content .card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=result.component.css.map */

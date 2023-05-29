@@ -1,0 +1,77 @@
+.auth-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 150px - 80px);
+}
+.auth-container .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f9f9;
+}
+.auth-container .content .login-content,
+.auth-container .content .register-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.auth-container .content .login-content h2,
+.auth-container .content .register-content h2 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.auth-container .content .login-content form,
+.auth-container .content .register-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+}
+.auth-container .content .login-content form input,
+.auth-container .content .register-content form input {
+  width: 100%;
+  border: none;
+  background: #EFEEF3;
+  padding: 10px;
+  height: 40px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.auth-container .content .login-content form input::placeholder,
+.auth-container .content .register-content form input::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.auth-container .content .login-content form p,
+.auth-container .content .register-content form p {
+  color: #dba226;
+  font-weight: 600;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.auth-container .content .login-content form button,
+.auth-container .content .register-content form button {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background-color: #dba226;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 15px;
+  height: 60px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.auth-container .content .login-content form button:hover,
+.auth-container .content .register-content form button:hover {
+  background-color: #000000;
+  color: #dba226;
+}
+
+/*# sourceMappingURL=auth.component.css.map */

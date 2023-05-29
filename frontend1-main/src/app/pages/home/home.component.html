@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<div class="home-container">
+  <div class="content">
+    <div class="banner">
+      <div class="details">
+        <div class="border">
+          <div class="logo">
+            <p>RECIPES</p>
+            <img src="/assets/icon-logo.png" alt="logo">
+            <p>WORLD</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="feed" *ngIf="recipeList.length > 0">
+      <div class="card-wrapper" *ngFor="let recipe of recipeList">
+        <app-recipe-card [recipe]="recipe"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

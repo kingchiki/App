@@ -1,0 +1,21 @@
+<div class="header-container">
+  <div class="content">
+    <div class="logo">
+      <p>RECIPES</p>
+      <img src="/assets/icon-logo.png" alt="logo">
+      <p>WORLD</p>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="home">Home</a></li>
+        <li *ngIf="userData"><a href="my-recipes">My Recipes</a></li>
+        <li *ngIf="!userData"><a href="auth">Login</a></li>
+        <li *ngIf="userData"><a (click)="handleLogout()" >LogOut</a></li>
+      </ul>
+    </div>
+    <div class="search">
+      <img src="/assets/icon-search.png" alt="logo">
+      <input type="text" placeholder="search..." (keyup.enter)="onSearch($event)" />
+    </div>
+  </div>
+</div>

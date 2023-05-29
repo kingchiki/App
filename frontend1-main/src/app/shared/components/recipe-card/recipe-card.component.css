@@ -1,0 +1,70 @@
+.recipe-card-container {
+  text-decoration: none;
+  color: inherit;
+}
+.recipe-card-container .recipe-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 300px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.recipe-card-container .recipe-card .card-img {
+  height: 200px;
+}
+.recipe-card-container .recipe-card .card-img img {
+  width: 100%;
+  height: 100%;
+}
+.recipe-card-container .recipe-card .card-desc {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 150px;
+}
+.recipe-card-container .recipe-card .card-desc .card-text .topic {
+  text-transform: uppercase;
+  color: #b5460f;
+  font-weight: 600;
+}
+.recipe-card-container .recipe-card .card-desc .card-text .name {
+  font-weight: 600;
+  font-size: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.recipe-card-container .recipe-card .card-desc .card-owner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recipe-card-container .recipe-card .card-desc .card-owner .card-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recipe-card-container .recipe-card .card-desc .card-owner .card-time img {
+  width: 25px;
+  height: 25px;
+}
+.recipe-card-container .recipe-card .card-desc .card-owner .card-name p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.recipe-card-container .recipe-card .card-desc .card-owner .card-name p span:first-child {
+  margin-right: 10px;
+}
+.recipe-card-container .recipe-card .card-desc .card-owner .card-name p span:last-child {
+  color: #dba226;
+}
+
+/*# sourceMappingURL=recipe-card.component.css.map */

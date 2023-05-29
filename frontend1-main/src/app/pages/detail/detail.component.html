@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div *ngIf="recipe" class="detail-container">
+  <div class="content">
+    <div class="detail-img">
+      <img [src]="getImage(recipe.image)">
+    </div>
+    <div class="detail-desc">
+      <div class="title">
+        <h2>{{recipe.name}}</h2>
+        <p [innerHTML]="recipe.description"></p>
+      </div>
+      <div class="detail-bottom">
+        <div class="time">
+          <img src="/assets/icon-clock.png" alt="time">
+          <p>{{recipe.readyInMinutes}}mins</p>
+        </div>
+        <div class="owner">
+          <p><span>By: </span><span>{{recipe.user.name}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

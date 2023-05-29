@@ -1,0 +1,43 @@
+<div class="add-popup-container" *ngIf="showPopup">
+  <div class="add-topic">
+    <h2>Add a New Recipe</h2>
+    <img src="/assets/icon-close.png" alt="close" (click)="hidePopup()">
+  </div>
+
+  <div class="add-desc">
+    <form [formGroup]="myForm" (ngSubmit)="handleSubmit($event)">
+
+      <div class="add-img" [style.background-image]="imageUrl" (click)="fileInput.click()">
+        <p>Click here to upload a image</p>
+        <input type="file" #fileInput style="display:none;" (change)="onFileSelected($event)">
+
+
+      </div>
+      <div class="error-message" *ngIf="myForm.controls['image']?.errors && myForm.controls['image'].errors?.['required'] "> Image is required.</div>
+
+
+      <input type="text" placeholder="Enter name" formControlName="name">
+      <div *ngIf="( myForm.controls['name'].dirty || myForm.controls['name'].touched)">
+        <div class="error-message" *ngIf="myForm.controls['name']?.errors && myForm.controls['name'].errors?.['required'] "> Name is required.</div>
+      </div>
+
+      <input type="text" placeholder="Cuisine" formControlName="cuisine">
+      <div *ngIf="( myForm.controls['cuisine'].dirty || myForm.controls['cuisine'].touched)">
+        <div class="error-message" *ngIf="myForm.controls['cuisine']?.errors && myForm.controls['cuisine'].errors?.['required'] "> Cuisine is required.</div>
+      </div>
+
+      <input type="number" min="0" placeholder="Duration in terms of minutes" formControlName="readyInMinutes">
+      <div *ngIf="( myForm.controls['readyInMinutes'].dirty || myForm.controls['readyInMinutes'].touched)">
+        <div class="error-message" *ngIf="myForm.controls['readyInMinutes']?.errors && myForm.controls['readyInMinutes'].errors?.['required'] "> Duration is required.</div>
+      </div>
+
+      <textarea placeholder="Enter description" formControlName="description"></textarea>
+      <div *ngIf="( myForm.controls['description'].dirty || myForm.controls['description'].touched)">
+        <div class="error-message" *ngIf="myForm.controls['description']?.errors && myForm.controls['description'].errors?.['required'] ">Description is required.</div>
+      </div>
+
+      <button>Submit</button>
+    </form>
+  </div>
+</div>
+

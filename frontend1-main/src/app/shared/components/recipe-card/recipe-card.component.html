@@ -1,0 +1,22 @@
+<a [href]="'detail/'+recipe.id+'?isOnline='+getOnline()" class="recipe-card-container" >
+  <div class="recipe-card">
+    <div class="card-img">
+      <img [src]="getImage(recipe.image)" alt="Recipe Dish">
+    </div>
+    <div class="card-desc">
+      <div class="card-text">
+        <p class="topic">{{recipe.name}} | {{recipe.cuisine}}</p>
+        <p class="name">{{recipe.description}}</p>
+      </div>
+      <div class="card-owner">
+        <div class="card-time">
+          <img src="/assets/icon-clock.png" alt="time">
+          <p>{{recipe.readyInMinutes}} mins</p>
+        </div>
+        <div class="card-name">
+          <p><span>By:</span><span>{{recipe.user.name}}</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
